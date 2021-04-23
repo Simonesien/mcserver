@@ -2,7 +2,6 @@ TMUX_SOCKET="minecraft"
 
 is_server_running() {
 	tmux -L $TMUX_SOCKET has-session > /dev/null 2>&1
-	#tmux -L $TMUX_SOCKET has-session -t $TMUX_SESSION > /dev/null 2>&1
 	return $?
 }
 
@@ -24,7 +23,6 @@ start_server() {
 	echo "Starting Server in tmux session"
 	echo session=$session >> /home/pi/minecraft-server/session
 	tmux -L $TMUX_SOCKET new-session -c $MC_HOME -s $TMUX_SESSION -d java -Xmx2560M -jar server.jar nogui
-	#tmux -L $TMUX_SOCKET new-session -c $MC_HOME -s $TMUX_SESSION -d java -Xmx2560M -Xms1024M -jar server.jar nogui
 	return $?
 }
 
@@ -104,7 +102,6 @@ restart_server() {
 			return 1
 		fi
 	done
-	#tmux -L $TMUX_SOCKET new-session -c $MC_HOME -s $TMUX_SESSION -d java -Xmx2560M -Xms1024M -jar server.jar nogui
 	return $?
 }
 
