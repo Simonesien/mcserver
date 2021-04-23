@@ -8,6 +8,6 @@
 
 Wenn ihr es auf eurem Server genauso machen wollt, ladet euch alles herunter und ändert den Pfad "/home/pi/minecraft-server/" wo es nötig ist (mc, minecraft@.service, evtl. cronjob) zu dem Verzeichnis, in dem ihr alles speichern wollt. Ihr müsst auch noch die Datei minecraft@.service in den Ordner /etc/systemd/system/ legen und die Datei mc ausführbar (```sudo chmod +x```) machen. 
 
-Ich habe zusätzlich noch einen cronjob alle 2 Stunden (0 &midast;/2 &midast; &midast; &midast;) mit dem Command ``` . /home/pi/minecraft-server/session && /home/pi/minecraft-server/mc $session restart && unset session ``` laufen. 
+Ich habe zusätzlich noch einen cronjob alle 2 Stunden (0 &midast;/2 &midast; &midast; &midast;) mit dem Command ``` . /home/pi/minecraft-server/session && /home/pi/minecraft-server/mc $session restart && unset session ``` zum automatischen Neustarten laufen. 
 
 Zum erstmaligen Starten des Servers musst du ``` ./mc world1 enable ``` eingeben. Du kannst auch mehrere Welten erstellen. Wenn du sie gleichzeitig starten möchtest, änder in der Startdatei (mc) is_server_running zu is_session_running (Vergiss nicht, die dazugehörigen Logmeldungen anzupassen). 
