@@ -7,15 +7,14 @@ After=network.target
 Type=forking
 User=pi
 Group=pi
-KillMode=none
 
 PrivateDevices=no
 NoNewPrivileges=yes
-ReadWritePaths=/home/pi/minecraft-server
-WorkingDirectory=/home/pi/minecraft-server
-ExecStart=/home/pi/minecraft-server/mc %i start
-ExecReload=/home/pi/minecraft-server/mc %i restart
-ExecStop=/home/pi/minecraft-server/mc %i stop
+ReadWritePaths=__SOCKET__
+WorkingDirectory=__SOCKET__
+ExecStart=__SOCKET__mc %i start
+ExecReload=__SOCKET__mc %i restart
+ExecStop=__SOCKET__mc %i stop
 Restart=on-failure
 RestartSec=3
 
