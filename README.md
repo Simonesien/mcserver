@@ -17,6 +17,6 @@ To create a world, run ```./mc worldname create```. For permanent starting ```./
 You can render a specific or random seed to a browser view using ```./mc seed render``` respectively ```./mc random render```. To generate an overview of an existing world, run ```./mc worldname overview```. Outputs will be saved to ```./maps/```.
 Help is available with ```./mc help```.
 
-If you've developed some improvement for this code yourseld, feel free to open a pull request or issue.
+If you've developed some improvement for this code yourself, feel free to open a pull request or issue.
 
 Credits for render and overview: [DMBuce](https://github.com/DMBuce/mcexplore), [Minecraft-Overviewer Project](https://github.com/overviewer/Minecraft-Overviewer)
